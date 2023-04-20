@@ -26,110 +26,160 @@ nav a:hover {
   text-decoration: underline;
 }
 
-
-
 /* CSS styles for section and h1 tags */
 section.mySkills {
-    background-color: #f5f5f5;
-    padding: 50px;
-  }
-  h1 {
-    text-align: center;
-    font-size: 36px;
-    margin-bottom: 30px;
-  }
-  
-  /* CSS styles for flex container and flex children */
-  .flexContainer {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-  }
-  
-  .flexChild {
-    width: 30%;
-    margin-bottom: 20px;
-    text-align: center;
-  }
-  
-  .flexChild img {
-    width: 100%;
-    max-width: 200px;
-    height: auto;
-  }
-  
-  /* CSS styles for h3 and p tags inside flex children */
-  .flexChild h3 {
-    font-size: 24px;
-    margin-bottom: 10px;
-  }
-  
-  .flexChild p {
-    font-size: 16px;
-    line-height: 1.5;
-  }
+  background-color: #f5f5f5;
+  padding: 50px;
+}
 
-  
+h1 {
+  text-align: center;
+  font-size: 36px;
+  margin-bottom: 30px;
+}
 
+/* My UX Skills section coded using CSS flex  */
+.flexContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  flex-direction: column; /* Updated flex-direction to column */
+}
 
+.flexChild {
+  width: 100%; /* Updated width to 100% */
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.flexChild img {
+  width: 100%;
+  max-width: 200px;
+  height: auto;
+  border-radius: 10px; /* Added border-radius for rounded corners */
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3); /* Added box-shadow for grey drop shadow */
+}
+
+/* CSS styles for h3 and p tags inside flex children */
+.flexChild h3 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.flexChild p {
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.workGrid {
+  display: grid;
+  grid-template-columns: 1fr; /* Updated grid-template-columns to 1fr for mobile views */
+  grid-template-rows: auto auto auto auto; /* Updated grid-template-rows to auto for mobile views */
+  gap: 20px;
+  grid-template-areas: "img1" "item1" "img2" "item2"; /* Updated grid-template-areas for mobile views */
+}
+
+.workItem:nth-child(1) {
+  grid-area: img1;
+}
+
+.workItem:nth-child(2) {
+  grid-area: item1;
+}
+
+.workItem:nth-child(3) {
+  grid-area: img2;
+}
+
+.workItem:nth-child(4) {
+  grid-area: item2;
+}
+
+/* Footer Styles */
+footer {
+  background-color: #333;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.footer-buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer-buttons a {
+  display: inline-block;
+  padding: 10px 20px;
+  margin-right: 10px;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  border: 2px solid #fff;
+  transition: all 0.3s ease-in-out;
+}
+
+.footer-buttons a:hover {
+  background-color: #fff;
+  color: #333;
+  border-color: #333;
+}
+
+/* Media Query for Mobile Views */
+@media (max-width: 768px) {
   .workGrid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: auto;
+    grid-template-columns: 1fr; 
+    grid-template-rows: auto auto auto auto; 
     gap: 20px;
-    grid-template-areas:
-      "img1 item1"
-      "img2 item2";
+   
+/* Media Query for Mobile Views */
+@media (max-width: 768px) {
+  .workGrid {
+    grid-template-columns: 1fr; 
+    grid-template-rows: auto auto auto auto; 
+    gap: 20px;
+    grid-template-areas: 
+      "img1"
+      "item1"
+      "img2"
+      "item2"; /* Updated grid-template-areas for mobile views */
   }
-  
+
   .workItem:nth-child(1) {
     grid-area: img1;
   }
-  
+
   .workItem:nth-child(2) {
     grid-area: item1;
   }
-  
+
   .workItem:nth-child(3) {
     grid-area: img2;
   }
-  
+
   .workItem:nth-child(4) {
     grid-area: item2;
   }
-  
 
-  /* Footer Styles */
-  
-  footer {
-    background-color: #333;
-    color: #fff;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 20px;
+  .flexContainer {
+    flex-direction: row; /* Updated flex-direction to row for mobile views */
+  }
+
+  .flexChild {
+    width: calc(50% - 20px); /* Updated width to 50% for mobile views */
   }
   
-  .footer-buttons {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  .flexChild img {
+    max-width: 100%; /* Updated max-width to 100% for mobile views */
   }
-  
-  .footer-buttons a {
-    display: inline-block;
-    padding: 10px 20px;
-    margin-right: 10px;
-    color: #fff;
-    text-decoration: none;
-    border-radius: 5px;
-    border: 2px solid #fff;
-    transition: all 0.3s ease-in-out;
-  }
-  
-  .footer-buttons a:hover {
-    background-color: #fff;
-    color: #333;
-    border-color: #333;
-  }
-  
+}
+.flexChild img {
+  width: 100%;
+  max-width: 200px;
+  height: auto;
+  border-radius: 10px; /* Added border-radius for rounded corners */
+  box-shadow: 0px 0px 10px rgba(0, 0, 255, 0.3); /* Added box-shadow for blue drop shadow */
+}
